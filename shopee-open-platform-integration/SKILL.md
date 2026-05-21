@@ -146,6 +146,47 @@ const { access_token, refresh_token } = await res.json();
 // Replace both tokens — refresh tokens ARE rotated.
 ```
 
+## ⚠️ Sensitive Data Access (Shopee Developer Guide 718)
+
+By default, all **customer sensitive data** returned by Shopee API is **MASKED**:
+- Buyer name → `J*** D**`
+- Phone → `+62 8** *** ***12`
+- Email → `j***@gmail.com`
+- Address → `Jl. Sudirman No.** Kel. ***`
+
+This affects endpoints like `order.get_order_detail`, `logistics.get_address_list`. **NOT** product/shop endpoints — those return unmasked product info regardless.
+
+To UNMASK sensitive data, ALL devs need:
+
+1. **IP Whitelist** (mandatory)
+   - Open Platform Console → App List → Go Live → IP Address Whitelist
+   - Declare all server IPs that will call the API
+   - Once enabled, **API calls only accepted from declared IPs** — pindah server = re-declare
+   - Use a **fixed VPS IP** (Hostinger / Hetzner / DigitalOcean droplet, NOT Vercel serverless)
+
+2. **Penetration Test Report** (mandatory if ISV serves Thailand sellers; recommended for others)
+   - Engage CREST-accredited tester (SEA) or Qianxin/360/Sangfor/Chaitin (China)
+   - Report must include: external exposure, vulnerability assessment, complete findings, confirmation of no unresolved critical/high issues
+   - Issued within last 12 months at submission
+   - Cost: ~Rp 15-50jt for ID/SEA region (varies by app complexity)
+   - Review: ~10 working days after submission
+   - Validity: **2 years** from report issue date
+
+### When you actually need this
+
+| Endpoint scope | Pen test + IP allowlist needed? |
+|---|---|
+| `product.info_read` (item list, item detail) | ❌ No — product data is public-facing |
+| `shop.info_read` | ❌ No — shop name/follower count not sensitive |
+| `image.upload` | ❌ No — your own asset upload |
+| `order.info_read` for buyer name/phone/address | ✅ Yes — otherwise data is masked |
+| `logistics.get_address_list` | ✅ Yes — full address |
+| `merchant.payment_account.*` | ✅ Yes + extra ISV review for financial data |
+
+**Practical sequencing**:
+1. Phase 1: Launch with product/shop scopes — no pen test required, low review friction
+2. Phase 2 (when you need order attribution / shipping labels): commission pen test, enable IP allowlist, request order scope
+
 ## Minimum scope strategy (faster review)
 
 Don't request scopes you don't use yet. Shopee review checks for "scope necessity." Start with this minimal set and add as features land:
