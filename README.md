@@ -16,6 +16,7 @@ Each skill is a single self-contained `SKILL.md` with copy-pasteable code, gotch
 | **[facebook-domain-verification](./facebook-domain-verification/SKILL.md)** | Verify a domain in Facebook Business Manager using BOTH the HTML file method AND the meta-tag method simultaneously, with Next.js middleware exemption for site verification files. | 139 |
 | **[nextjs-subdomain-multitenant](./nextjs-subdomain-multitenant/SKILL.md)** | Subdomain → brand/tenant rewriting in Next.js 15 App Router with public file exemptions, dev-mode localhost fallback, and apex landing pass-through. | 188 |
 | **[shopee-data-import](./shopee-data-import/SKILL.md)** | Brutally honest decision tree for importing product data from a Shopee storefront. Documents what works (CSV export, Meta Catalog API, manual seed) and what fails (raw HTTP, bare Playwright, cookie injection). | 190 |
+| **[shopee-open-platform-integration](./shopee-open-platform-integration/SKILL.md)** | Build a Shopee Open Platform "Partner App" so ONE developer account onboards MANY seller shops via OAuth. HMAC-SHA256 signing, 4h/30d token lifecycle, minimum-scope strategy for faster production review. The legitimate alternative to `shopee-data-import` when you have agency/SaaS scale. | 280 |
 
 ---
 
