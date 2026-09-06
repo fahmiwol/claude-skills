@@ -109,8 +109,8 @@ Open an issue first if it's a new skill — we want signal-to-noise high.
 More of the same working method, extracted from real sessions:
 
 - **[Agent Memory Starter](https://github.com/fahmiwol/agent-memory-starter)** — free, open source. Stop re-explaining your project every session.
-- **[Agent Memory OS](https://fahmiwolf.gumroad.com/l/npfhry)** — $7. The full method.
-- **[Second Brain Kit](https://fahmiwolf.gumroad.com/l/ezqudk)** — $29. The same idea as an MCP server your agent queries.
+- **[Agent Memory OS](https://fahmiwolf.gumroad.com/l/npfhry)** — $5. The full method.
+- **[Second Brain Kit](https://fahmiwolf.gumroad.com/l/ezqudk)** — $7. The same idea as an MCP server your agent queries.
 
 All of them: [fahmiwolf.gumroad.com](https://fahmiwolf.gumroad.com)
 
