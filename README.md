@@ -102,6 +102,20 @@ Open an issue first if it's a new skill — we want signal-to-noise high.
 
 ---
 
+<!--toko-mulai-->
+
+## Related tools
+
+More of the same working method, extracted from real sessions:
+
+- **[Agent Memory Starter](https://github.com/fahmiwol/agent-memory-starter)** — free, open source. Stop re-explaining your project every session.
+- **[Agent Memory OS](https://fahmiwolf.gumroad.com/l/npfhry)** — $7. The full method.
+- **[Second Brain Kit](https://fahmiwolf.gumroad.com/l/ezqudk)** — $29. The same idea as an MCP server your agent queries.
+
+All of them: [fahmiwolf.gumroad.com](https://fahmiwolf.gumroad.com)
+
+<!--toko-akhir-->
+
 ## 📄 License
 
 MIT. Use these freely in commercial or open-source projects. Attribution appreciated but not required.
